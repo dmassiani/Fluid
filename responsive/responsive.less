@@ -1,32 +1,4 @@
 @import "utilities";
-// GRID
-// --------------------------------------------------
-
-/* example of use */
-@column-width: 60;
-@gutter-width: 20;
-@columns: 16;
-
-// default grid // html class
-.loopingClass (@index) when (@index > 0) {
-
-	(~".col-@{index}"){.column(@index)}
-	.loopingClass(@index - 1);
-
-}
-
-.loopingClass (0) {}
-.loopingClass (@columns);
-
-/*
-
-@media (max-width: 480px) {
-   article { .column(12); }
-   aside { .column(12); }
-}
-*/
-
-// définir une structure wrap - inner - content
 
 // 480px
 @media only screen and (min-width: 480px) {
