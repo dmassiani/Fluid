@@ -5,13 +5,45 @@
 	@gutter-width: 20;
 	@columns: 16;
 
-	// default grid // html class
+.row{
 	.loopingClass (@index) when (@index > 0) {
 
+		// default grid // html class
 		(~".col-@{index}"){.column(@index)}
+
+		// push
+		(~".push-@{index}"){.push(@index)}
+
+		// pull
+		(~".pull-@{index}"){.pull(@index)}
+
 		.loopingClass(@index - 1);
 
 	}
 
 	.loopingClass (0) {}
 	.loopingClass (@columns);
+	
+}
+
+.row-fluid{
+
+	.loopingClass (@index) when (@index > 0) {
+
+		// grid fluid
+		(~".col-@{index}"){.column-fluid(@index)}
+
+		// push fluid
+		(~".push-@{index}"){.push-fluid(@index)}
+
+		// pull fluid
+		(~".pull-@{index}"){.pull-fluid(@index)}
+
+		.loopingClass(@index - 1);
+
+	}
+
+	.loopingClass (0) {}
+	.loopingClass (@columns);
+
+}

@@ -12,6 +12,7 @@
 
 // Set @total-width to 100% for a fluid layout
 @total-width: @gridsystem-width;
+@total-width-fluid: 100%;
 
 // Uncomment these two lines and the star-hack width/margin lines below to enable sub-pixel fix for IE6 & 7. See http://tylertate.com/blog/2012/01/05/subpixel-rounding.html
 // @min-width: 960;
@@ -57,4 +58,31 @@
 }
 .pull(@offset:1) {
 	margin-right: @total-width*(((@gutter-width+@column-width)*@offset) / @gridsystem-width) + @total-width*((@gutter-width*.5)/@gridsystem-width);
+}
+
+//////////
+// FLUID //
+//////////
+
+.row-fluid(@columns:@columns) {
+	display: block;
+	width: @total-width-fluid*((@gutter-width + @gridsystem-width)/@gridsystem-width);
+	margin: 0 @total-width-fluid*(((@gutter-width*.5)/@gridsystem-width)*-1);
+	// *width: @total-width*((@gutter-width + @gridsystem-width)/@gridsystem-width)-@correction;
+	// *margin: 0 @total-width*(((@gutter-width*.5)/@gridsystem-width)*-1)-@correction;
+	.clearfix;
+}
+.column-fluid(@x,@columns:@columns) {
+	display: inline;
+	float: left;
+	width: @total-width-fluid*((((@gutter-width+@column-width)*@x)-@gutter-width) / @gridsystem-width);
+	margin: 0 @total-width-fluid*((@gutter-width*.5)/@gridsystem-width);
+	// *width: @total-width*((((@gutter-width+@column-width)*@x)-@gutter-width) / @gridsystem-width)-@correction;
+	// *margin: 0 @total-width*((@gutter-width*.5)/@gridsystem-width)-@correction;
+}
+.push-fluid(@offset:1) {
+	margin-left: @total-width-fluid*(((@gutter-width+@column-width)*@offset) / @gridsystem-width) + @total-width-fluid*((@gutter-width*.5)/@gridsystem-width);
+}
+.pull-fluid(@offset:1) {
+	margin-right: @total-width-fluid*(((@gutter-width+@column-width)*@offset) / @gridsystem-width) + @total-width-fluid*((@gutter-width*.5)/@gridsystem-width);
 }
