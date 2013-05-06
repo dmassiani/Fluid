@@ -12,4 +12,5 @@ To Do
 - [x] Define Template with wrap - inner - content
 - [ ] Optimize Grid system for html renderer (loop)
 - [x] Invert responsive and grid on index
-- [x] Add Handlebars for templating
+- <del>[x] Add Handlebars for templating</del>
+- [x] remove Handlebars due to a xhtmlrequest acros issue

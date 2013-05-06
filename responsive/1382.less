@@ -1,0 +1,9 @@
+
+	@gutter-width: 20;
+	@columns: 16;
+	@width: 1600px;
+	@wrap-width: ((@width - (@gutter-width * @columns))/@columns);
+
+.wrapper{
+	width: @wrap-width;
+}
