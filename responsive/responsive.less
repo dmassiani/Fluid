@@ -1,7 +1,12 @@
 @import "utilities";
 
+// Really ?
+@media only screen and (max-width: 320px){
+@import "min";
+}
+
 // 320px
-@media only screen and (max-width: 320px) and (max-width: 479px){
+@media only screen and (min-width: 320px) and (max-width: 479px){
 @import "320";
 }
 
@@ -26,8 +31,13 @@
 }
 
 // 1382px
-@media only screen and (min-width: 1382px) {
+@media only screen and (min-width: 1382px) and (max-width: 1600px){
 @import "1382";
+}
+
+// 1600px
+@media only screen and (min-width: 1600px){
+@import "1600";
 }
 
 // 2x
