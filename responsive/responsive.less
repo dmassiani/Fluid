@@ -7,12 +7,10 @@
 @gutter-width: 20;
 @columns: 16;
 
-// default grid
+// default grid // html class
 .loopingClass (@index) when (@index > 0) {
 
 	(~".col-@{index}"){.column(@index)}
-
-	// next iteration
 	.loopingClass(@index - 1);
 
 }
@@ -28,31 +26,36 @@
 }
 */
 
-/* mode fluid */
-// todo : créer une classe parente genre .grid-fluid et pas de classe représente la version "normal"
-
-/* mode fluid */
-
-@total-width: 100%; // Switch from pixels to percentages
-
-
 // définir une structure wrap - inner - content
 
-@media (max-width: 480px) {
+// 480px
+@media only screen and (min-width: 480px) {
+@import "480";
 }
-@media (min-width: 481px) and (max-width: 768px) {
+
+// 600px
+@media only screen and (min-width: 600px) {
+@import "600";
 }
-@media (min-width: 769px) and (max-width: 800px) {
+
+// 768px
+@media only screen and (min-width: 768px) {
+@import "768";
 }
-@media (min-width: 801px) and (max-width: 1024px) {
+
+// 992px
+@media only screen and (min-width: 992px) {
+@import "992";
 }
-@media (min-width: 1025px) and (max-width: 1280px) {
+
+// 1382px
+@media only screen and (min-width: 1382px) {
+@import "1382";
 }
-@media (min-width: 1281px) and (max-width: 1344px) {
-}
-@media (min-width: 1345px) and (max-width: 1440px) {
-}
-@media (min-width: 1441px) and (max-width: 1920px) {
-}
-@media (min-width: 1921px) and (max-width: 2560px) {
-}
+
+// 2x
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5), 
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+@import "2x"; }
