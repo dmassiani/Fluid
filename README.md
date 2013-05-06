@@ -10,3 +10,5 @@ To Do
 - Add Bootstrap button.less
 - Update Utilities.less : @media with real size
 - Define Template with wrap - inner - content
+- Optimize Grid systeme for html renderer (loop)
+- invert responsive and grid on index
