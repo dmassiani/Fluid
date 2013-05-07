@@ -258,6 +258,28 @@ table {
 .wrapper:after {
   clear: both;
 }
+.visible-print {
+  display: none !important;
+}
+@media print {
+  .visible-print {
+    display: inherit !important;
+  }
+  .hidden-print {
+    display: none !important;
+  }
+}
+/* ---- setup ---- */
+body {
+  background: #f0f0f0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  /* old */
+
+  font-size: 1.6vm;
+  font-size: 1.6vmin;
+  line-height: 2.6vh;
+}
 @-ms-viewport {
   width: device-width;
 }
@@ -311,26 +333,71 @@ table {
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 479px) {
+  body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    /* old */
+  
+    font-size: 3vm;
+    font-size: 3vmin;
+    line-height: 4vh;
+  }
   .wrapper {
     width: 320px;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 599px) {
+  body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    /* old */
+  
+    font-size: 2vm;
+    font-size: 2vmin;
+    line-height: 3vh;
+  }
   .wrapper {
     width: 480px;
   }
 }
 @media only screen and (min-width: 600px) and (max-width: 767px) {
+  body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    /* old */
+  
+    font-size: 2vm;
+    font-size: 2vmin;
+    line-height: 3vh;
+  }
   .wrapper {
     width: 600px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+  body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+    /* old */
+  
+    font-size: 2.2vm;
+    font-size: 2.2vmin;
+    line-height: 3.2vh;
+  }
   .wrapper {
     width: 768px;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1381px) {
+  body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 21px;
+    /* old */
+  
+    font-size: 2.1vm;
+    font-size: 2.1vmin;
+    line-height: 3.1vh;
+  }
   .wrapper {
     width: 992px;
   }
@@ -437,6 +504,15 @@ table {
   }
 }
 @media only screen and (min-width: 1382px) and (max-width: 1600px) {
+  body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+    /* old */
+  
+    font-size: 2.2vm;
+    font-size: 2.2vmin;
+    line-height: 3.2vh;
+  }
   .wrapper {
     width: 1382px;
   }
@@ -480,6 +556,15 @@ table {
   }
 }
 @media only screen and (min-width: 1600px) {
+  body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    /* old */
+  
+    font-size: 2.4vm;
+    font-size: 2.4vmin;
+    line-height: 3.4vh;
+  }
   .wrapper {
     width: 1600px;
   }
@@ -524,26 +609,4 @@ table {
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   
-}
-.visible-print {
-  display: none !important;
-}
-@media print {
-  .visible-print {
-    display: inherit !important;
-  }
-  .hidden-print {
-    display: none !important;
-  }
-}
-/* ---- setup ---- */
-body {
-  background: #f0f0f0;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 20px;
-  /* old */
-
-  font-size: 2vm;
-  font-size: 2vmin;
-  line-height: 2.4vh;
 }

@@ -13,9 +13,9 @@
   src: local('OpenSans'), url('//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700') format('truetype');
 }
 
-.font(){
+.font(@font-size){
 	@font-px-size: @font-size/10;
-	@line-px-height: @line-height/10;
+	@line-px-height: (@font-size+10)/10;
 
 	font-family: @font-family;
 	font-size: ~"@{font-size}px"; /* old */
