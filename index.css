@@ -1,3 +1,7 @@
+@font-face {
+  font-family: 'Open Sans';
+  src: local('OpenSans'), url('//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700') format('truetype');
+}
 /* normalize.css 2012-03-11T12:53 UTC - http://github.com/necolas/normalize.css */
 article,
 aside,
@@ -229,9 +233,30 @@ table {
   border-spacing: 0;
 }
 .wrapper {
-  width: 960px;
+  width: 1280px;
   margin-right: auto;
   margin-left: auto;
+  *zoom: 1;
+}
+.wrapper:before,
+.wrapper:after {
+  content: "";
+  display: table;
+}
+.wrapper:after {
+  clear: both;
+}
+.ie6 .wrapper,
+.ie7 .wrapper {
+  zoom: 1;
+}
+.wrapper:before,
+.wrapper:after {
+  content: "";
+  display: table;
+}
+.wrapper:after {
+  clear: both;
 }
 @-ms-viewport {
   width: device-width;
@@ -309,15 +334,192 @@ table {
   .wrapper {
     width: 992px;
   }
+  .main {
+    display: inline;
+    float: left;
+    width: 972px;
+    margin-right: 20px;
+  }
+  .main header {
+    margin-left: 124px;
+  }
+  .main article {
+    top: 42px;
+    display: block;
+    width: 992px;
+    *zoom: 1;
+  }
+  .main article:before,
+  .main article:after {
+    content: "";
+    display: table;
+  }
+  .main article:after {
+    clear: both;
+  }
+  .ie6 .main article,
+  .ie7 .main article {
+    zoom: 1;
+  }
+  .main article:before,
+  .main article:after {
+    content: "";
+    display: table;
+  }
+  .main article:after {
+    clear: both;
+  }
+  .main article header {
+    top: 42px;
+    display: block;
+    width: 992px;
+    *zoom: 1;
+  }
+  .main article header:before,
+  .main article header:after {
+    content: "";
+    display: table;
+  }
+  .main article header:after {
+    clear: both;
+  }
+  .ie6 .main article header,
+  .ie7 .main article header {
+    zoom: 1;
+  }
+  .main article header:before,
+  .main article header:after {
+    content: "";
+    display: table;
+  }
+  .main article header:after {
+    clear: both;
+  }
+  .main article section {
+    display: inline;
+    float: left;
+    width: 476px;
+    margin-right: 20px;
+  }
+  .main article footer {
+    top: 42px;
+    display: block;
+    width: 496px;
+    *zoom: 1;
+    margin-left: 496px;
+  }
+  .main article footer:before,
+  .main article footer:after {
+    content: "";
+    display: table;
+  }
+  .main article footer:after {
+    clear: both;
+  }
+  .ie6 .main article footer,
+  .ie7 .main article footer {
+    zoom: 1;
+  }
+  .main article footer:before,
+  .main article footer:after {
+    content: "";
+    display: table;
+  }
+  .main article footer:after {
+    clear: both;
+  }
+  .main article#invert section {
+    display: inline;
+    float: right;
+    width: 352px;
+    margin-right: 20px;
+    margin-left: 124px;
+  }
 }
 @media only screen and (min-width: 1382px) and (max-width: 1600px) {
   .wrapper {
     width: 1382px;
   }
+  .main {
+    display: inline;
+    float: left;
+    width: 1362px;
+    margin-right: 20px;
+  }
+  .main article {
+    top: 66.375px;
+    display: block;
+    width: 1382px;
+    *zoom: 1;
+  }
+  .main article:before,
+  .main article:after {
+    content: "";
+    display: table;
+  }
+  .main article:after {
+    clear: both;
+  }
+  .ie6 .main article,
+  .ie7 .main article {
+    zoom: 1;
+  }
+  .main article:before,
+  .main article:after {
+    content: "";
+    display: table;
+  }
+  .main article:after {
+    clear: both;
+  }
+  .main article section {
+    display: inline;
+    float: left;
+    width: 671px;
+    margin-right: 20px;
+  }
 }
 @media only screen and (min-width: 1600px) {
   .wrapper {
     width: 1600px;
+  }
+  .main {
+    display: inline;
+    float: left;
+    width: 1580px;
+    margin-right: 20px;
+  }
+  .main article {
+    top: 80px;
+    display: block;
+    width: 1600px;
+    *zoom: 1;
+  }
+  .main article:before,
+  .main article:after {
+    content: "";
+    display: table;
+  }
+  .main article:after {
+    clear: both;
+  }
+  .ie6 .main article,
+  .ie7 .main article {
+    zoom: 1;
+  }
+  .main article:before,
+  .main article:after {
+    content: "";
+    display: table;
+  }
+  .main article:after {
+    clear: both;
+  }
+  .main article section {
+    display: inline;
+    float: left;
+    width: 780px;
+    margin-right: 20px;
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
@@ -335,9 +537,13 @@ table {
   }
 }
 /* ---- setup ---- */
-html {
-  font-size: 16px;
-}
 body {
   background: #f0f0f0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  /* old */
+
+  font-size: 2vm;
+  font-size: 2vmin;
+  line-height: 2.4vh;
 }

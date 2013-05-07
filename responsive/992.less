@@ -1,3 +1,34 @@
+@width: 992px;
+
 .wrapper{
-	width: 992px;
+	width: @width;
+}
+
+.main{
+	.column(16,@width);
+	
+	header{
+		.push(2,@width);
+	}
+
+	article{
+		.row(16,@width);
+		header{
+			.row(16,@width)
+		}
+		section{
+			.column(8,@width);
+		}
+		footer{
+			.row(8,@width);
+			.push(8,@width);
+		}
+	}
+
+	article#invert{
+		section{
+			.column-invert(6,@width);
+			.push(2,@width);
+		}
+	}
 }

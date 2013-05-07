@@ -1,3 +1,15 @@
+@width: 1382px;
+
 .wrapper{
-	width: 1382px;
+	width: @width;
+}
+
+.main{
+	.column(16,@width);
+	article{
+		.row(16,@width);
+		section{
+			.column(8,@width);
+		}
+	}
 }
