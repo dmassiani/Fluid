@@ -1,6 +1,28 @@
 // ==============================================
 // Typography related mixins
+// Ce sont les unités vw et vh. Le vw est égal à 1/100ème de la largeur de la fenêtre et le vh est égal à 1/100ème de la hauteur de la fenêtre.
 // ==============================================
+
+// Import Google Web Fonts
+//@import url(//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+//@import url(http://fonts.googleapis.com/css?family=Josefin+Slab:300,400,700);
+
+
+@font-face {
+  font-family: 'Open Sans';
+  src: local('OpenSans'), url('//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700') format('truetype');
+}
+
+.font(){
+	@font-px-size: @font-size/10;
+	@line-px-height: @line-height/10;
+
+	font-family: @font-family;
+	font-size: ~"@{font-size}px"; /* old */
+	font-size: ~"@{font-px-size}vm";
+	font-size: ~"@{font-px-size}vmin";
+	line-height: ~"@{line-px-height}vh";
+}
 
 .font-size-rems(@px-size){
 	@rem-size: @px-size / @base-font-size;
