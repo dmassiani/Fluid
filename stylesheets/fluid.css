@@ -311,6 +311,15 @@ table {
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 479px) {
+  body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    /* old */
+  
+    font-size: 3vm;
+    font-size: 3vmin;
+    line-height: 3.4vh;
+  }
   .wrapper {
     width: 320px;
   }
